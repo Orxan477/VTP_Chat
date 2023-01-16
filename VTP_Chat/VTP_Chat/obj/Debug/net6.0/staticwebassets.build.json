@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "47vXP+rGWoY9hqWIt84lkPq1bbj1XyX2vEPw3Ffe7p0=",
+  "Hash": "ogZuS0nx1+sYEovk5uhR0wvGsyDBFn9lQz/1X+JQiVQ=",
   "Source": "VTP_Chat",
   "BasePath": "_content/VTP_Chat",
   "Mode": "Default",
@@ -51,23 +51,6 @@
       "OriginalItemSpec": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\VTP_Chat.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\css\\site.css",
-      "SourceId": "VTP_Chat",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\",
-      "BasePath": "_content/VTP_Chat",
-      "RelativePath": "css/site.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
       "Identity": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\favicon.ico",
       "SourceId": "VTP_Chat",
       "SourceType": "Discovered",
@@ -102,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
     },
     {
-      "Identity": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "Identity": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\js\\microsoft\\signalr\\dist\\browser\\signalr.js",
       "SourceId": "VTP_Chat",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\",
       "BasePath": "_content/VTP_Chat",
-      "RelativePath": "js/signalr/dist/browser/signalr.js",
+      "RelativePath": "js/microsoft/signalr/dist/browser/signalr.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.js"
+      "OriginalItemSpec": "wwwroot\\js\\microsoft\\signalr\\dist\\browser\\signalr.js"
     },
     {
-      "Identity": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "Identity": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\js\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
       "SourceId": "VTP_Chat",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\",
       "BasePath": "_content/VTP_Chat",
-      "RelativePath": "js/signalr/dist/browser/signalr.min.js",
+      "RelativePath": "js/microsoft/signalr/dist/browser/signalr.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +116,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js"
+      "OriginalItemSpec": "wwwroot\\js\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
       "Identity": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

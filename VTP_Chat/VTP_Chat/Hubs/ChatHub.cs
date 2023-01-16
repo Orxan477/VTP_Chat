@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 
-namespace VTP_Chat.SignalRChat.Hubs
+namespace VTP_Chat.Hubs
 {
-    public class ChatHub:Hub
+    public class ChatHub : Hub
     {
         public async Task SendMessage(string user, string message)
         {
