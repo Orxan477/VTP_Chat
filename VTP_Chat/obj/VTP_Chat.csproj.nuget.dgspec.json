@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\VTP_Chat.csproj": {}
+    "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\VTP_Chat.csproj": {
+    "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\VTP_Chat.csproj",
+        "projectUniqueName": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat.csproj",
         "projectName": "VTP_Chat",
-        "projectPath": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\VTP_Chat.csproj",
+        "projectPath": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat.csproj",
         "packagesPath": "C:\\Users\\Orxan477\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\VTP_Chat\\obj\\",
+        "outputPath": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,26 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
