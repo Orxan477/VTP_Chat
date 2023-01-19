@@ -7,6 +7,7 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 var enterGroup = document.getElementById("enterGroup");
 var sendMessageForm = document.getElementById("sendMessageForm");
 var leaveGroup = document.getElementById("leaveGroup");
+var clearMessages = document.getElementById("clearMessages");
 
 connection.on("ReceiveMessage", function (user, message) {
     const d = new Date();
@@ -33,36 +34,27 @@ connection.start().then(function () {
 });
 
 enterGroup.addEventListener("submit", function (ev) {
-    ev.preventDefault();
+    //ev.preventDefault();
     let user = {
         userName: document.getElementById("userName").value,
         group: document.getElementById("group").value
     };
     localStorage.setItem("user", JSON.stringify(user));
+    connection.invoke("AddGroupAsync", user.group);
+    /*connection.invoke("CurrentMessages", user.group);*/
     //var num = document.getElementById("group").value;
-
     hiddenArea();
 })
 
-//$(document).ready(function () {
-//    $(document).on("submit", "#enterGroup", function (ev) {
-//        ev.preventDefault();
-//        var number = $("#group :selected").val();
-//        //console.log("value=" + as);
-//        //var pizzaId = ev.target.nextElementSibling.value;
-//        $.ajax({
-//            url: "/Home/Index",
-//            data: {
-//                num: number
-//            },
-//            type: "GET",
-//            success: function (result) {
-//                alert("yes")
-//            }
-//        })
-//    })
-//})
 
+
+clearMessages.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    //console.log("s")
+    let user = JSON.parse(localStorage.getItem("user"));
+    connection.invoke("Clear", user.group);
+    location.reload();
+})
 
 leaveGroup.addEventListener("click", function () {
     let user = JSON.parse(localStorage.getItem("user"));
@@ -91,3 +83,20 @@ function hiddenArea() {
     enterGroup.parentElement.parentElement.parentElement.classList.add("d-none");
     sendMessageForm.parentElement.parentElement.classList.remove("d-none");
 }
+
+//$(document).ready(function () {
+//    $(document).on("submit", "#enterGroup", function (ev) {
+//        ev.preventDefault();
+//        var number = $("#group :selected").val();
+//        $.ajax({
+//            url: "/Home/Index",
+//            data: {
+//                num: number
+//            },
+//            type: "GET",
+//            success: function (result) {
+//                alert("yes")
+//            }
+//        })
+//    })
+//})

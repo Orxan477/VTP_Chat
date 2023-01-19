@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using VTP_Chat.DAL;
 using VTP_Chat.Models;
+using VTP_Chat.VM;
 
 namespace VTP_Chat.Hubs
 {
@@ -42,5 +43,33 @@ namespace VTP_Chat.Hubs
         {
             await Groups.RemoveFromGroupAsync(Context.ConnectionId, group);
         }
+        public async Task Clear(string num) 
+        {
+            Group dbGroup =await  _context.Groups.Where(x => x.Value == num).FirstOrDefaultAsync();
+            //List<Chat> dbChat = await _context.Chats.Where(x => x.GroupId == dbGroup.Id).ToListAsync();
+            HomeVM home = new HomeVM()
+            {
+                Chats = await _context.Chats.Where(x => x.GroupId == dbGroup.Id).ToListAsync(),
+            };
+            foreach (var item in home.Chats)
+            {
+                item.IsDeleted = true;
+            }
+            await _context.SaveChangesAsync();
+        }
+        //public async Task CurrentMessages(string gr)
+        //{
+        //    Group dbGroup = await _context.Groups.Where(x => x.Value == gr).FirstOrDefaultAsync();
+        //    //List<Chat> dbChat = await _context.Chats.Where(x => x.GroupId == dbGroup.Id).ToListAsync();
+        //    HomeVM home = new HomeVM()
+        //    {
+        //        Chats = await _context.Chats.Include(x => x.Group).Include(x => x.AppUser).Where(x => x.GroupId == dbGroup.Id && !x.IsDeleted).ToListAsync(),
+        //    };
+        //    foreach (var item in home.Chats)
+        //    {
+        //        await Clients.Group(item.Group.Value).SendAsync("ReceiveMessage", item.AppUser.UserName, item.Message);
+        //    }
+        //}
+
     }
 }

@@ -77,7 +77,6 @@ namespace VTP_Chat.Controllers
             var result = await _signInManager.PasswordSignInAsync(user, login.Password, false, false);
             if (!result.Succeeded)
             {
-            return Json(result);
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
                 return View(login);
             }
