@@ -10,7 +10,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         @if (User.IsInRole("Admin"))
                         {
-                            <a class="dropdown-item" asp-area="admin" asp-controller="Setting" asp-action="Index">Admin Panel</a>
+                            <a class="dropdown-item" asp-area="admin" asp-controller="dashboard" asp-action="Index">Admin Panel</a>
                         }
                         <a class="dropdown-item" asp-controller="Account" asp-action="Logout">Logout</a>
                     </div>

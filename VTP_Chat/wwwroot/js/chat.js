@@ -1,5 +1,7 @@
 ﻿"use strict";
 
+//const { data } = require("jquery");
+
 var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 
 var enterGroup = document.getElementById("enterGroup");
@@ -8,9 +10,9 @@ var leaveGroup = document.getElementById("leaveGroup");
 
 connection.on("ReceiveMessage", function (user, message) {
     const d = new Date();
-        let hour = (d.getHours());
-        let minute = (d.getMinutes());
-        let second = (d.getSeconds());
+    let hour = (d.getHours());
+    let minute = (d.getMinutes());
+    let second = (d.getSeconds());
     let li = `<li class="list-group-item">
                     <b>${user}</b>
                     <p>${message}</p>
@@ -31,14 +33,36 @@ connection.start().then(function () {
 });
 
 enterGroup.addEventListener("submit", function (ev) {
-    //ev.preventDefault();
+    ev.preventDefault();
     let user = {
         userName: document.getElementById("userName").value,
         group: document.getElementById("group").value
     };
     localStorage.setItem("user", JSON.stringify(user));
+    //var num = document.getElementById("group").value;
+
     hiddenArea();
 })
+
+//$(document).ready(function () {
+//    $(document).on("submit", "#enterGroup", function (ev) {
+//        ev.preventDefault();
+//        var number = $("#group :selected").val();
+//        //console.log("value=" + as);
+//        //var pizzaId = ev.target.nextElementSibling.value;
+//        $.ajax({
+//            url: "/Home/Index",
+//            data: {
+//                num: number
+//            },
+//            type: "GET",
+//            success: function (result) {
+//                alert("yes")
+//            }
+//        })
+//    })
+//})
+
 
 leaveGroup.addEventListener("click", function () {
     let user = JSON.parse(localStorage.getItem("user"));

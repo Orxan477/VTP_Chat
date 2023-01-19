@@ -1,34 +1,51 @@
-﻿@{
+﻿@using VTP_Chat.VM
+@model HomeVM
+@{
     ViewData["Title"] = "Home Page";
 }
 <div class="container">
     <div class="row">
         <div class="col-lg-12" style="display:flex; justify-content:center">
             <div class="col-lg-5" style="margin-top:5%">
-            <form id="enterGroup">
-                <div class="form-group">
-                    <input type="hidden" id="userName" class="form-control" value="@User.Identity.Name" />
-                </div>
-                <div class="form-group">
-                    <select id="group" class="form-control">
-                        <option value="group1">Group 1</option>
-                        <option value="group2">Group 2</option>
-                        <option value="group3">Group 3</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-success">Join</button>
-            </form>
-        </div>
+                <form id="enterGroup" asp-action="Index" >
+                    <div class="form-group">
+                        <input type="hidden" value="" />
+                        <input type="hidden" id="userName" class="form-control" value="@User.Identity.Name" />
+                    </div>
+                    <div class="form-group">
+                        <select id="group" class="form-control">
+                            @foreach (var group in @Model.Groups)
+                            {
+                                <option value="@group.Value">@group.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success">Join</button>
+                </form>
+            </div>
         </div>
     </div>
     <div class="row d-none" style="margin-top:5%">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
             <button class="btn btn-danger mb-3" id="leaveGroup">Leave</button>
         </div>
-        
+        <div class="col-lg-6">
+            <a class="btn btn-warning mb-3" asp-controller="Home" asp-action="Clear" asp-route-id="">Clear</a>
+        </div>
+
         <div class="col-lg-12">
             <ul class="list-group" id="appendMessage">
-
+                @if (Model.Chats != null)
+                {
+                    @foreach (var chat in Model.Chats)
+                    {
+                        <li class="list-group-item">
+                            <b>@chat.AppUser.UserName</b>
+                            <p>@chat.Message</p>
+                            <span class="text-muted d-flex justify-content-end">@chat.Date.Hour:@chat.Date.Minute:@chat.Date.Second</span>
+                        </li>
+                    }
+                }
             </ul>
         </div>
         <div class="col-lg-6 mt-4">
@@ -41,6 +58,6 @@
             </form>
         </div>
     </div>
-</div>  
+</div>
 <script src="~/js/microsoft/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/chat.js"></script>
