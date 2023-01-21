@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eg12oLbQeHjLpTW635VD3j6bvgyHQaEmwxwjDSrVPQk=",
+  "Hash": "3doXT2UuFhQGZrJ4/OoHZZoilPsjRuUMvNxlUdepRjE=",
   "Source": "VTP_Chat",
   "BasePath": "_content/VTP_Chat",
   "Mode": "Default",
@@ -15349,6 +15349,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\wwwroot\\js\\ajax.js",
+      "SourceId": "VTP_Chat",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\wwwroot\\",
+      "BasePath": "_content/VTP_Chat",
+      "RelativePath": "js/ajax.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ajax.js"
     },
     {
       "Identity": "C:\\Users\\Orxan477\\Desktop\\VTP_Chat\\VTP_Chat\\wwwroot\\js\\chat.js",

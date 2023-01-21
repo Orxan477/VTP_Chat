@@ -34,7 +34,9 @@ connection.start().then(function () {
 });
 
 enterGroup.addEventListener("submit", function (ev) {
-    //ev.preventDefault();
+    ev.preventDefault();
+    let empty = ` `
+    document.getElementById("appendMessage").innerHTML = empty;
     let user = {
         userName: document.getElementById("userName").value,
         group: document.getElementById("group").value
@@ -84,19 +86,3 @@ function hiddenArea() {
     sendMessageForm.parentElement.parentElement.classList.remove("d-none");
 }
 
-//$(document).ready(function () {
-//    $(document).on("submit", "#enterGroup", function (ev) {
-//        ev.preventDefault();
-//        var number = $("#group :selected").val();
-//        $.ajax({
-//            url: "/Home/Index",
-//            data: {
-//                num: number
-//            },
-//            type: "GET",
-//            success: function (result) {
-//                alert("yes")
-//            }
-//        })
-//    })
-//})
